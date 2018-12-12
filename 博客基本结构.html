@@ -1,0 +1,187 @@
+<!--这个框架从原来的html删减而来（包括行内代码），删减的部分不代表不需要，只是不在个性化配置范围内-->
+<!DOCTYPE html>
+<html>
+
+<head>
+    <!--CSS文件，包括了提供的SimpleMemory主题的css以及为了响应式设计的SimpleMemory-mobile-->
+    <!--如果需要配置个性化的话，更改下面的这些文件即可，它们在你保存的网页同名文件夹下，实际-->
+    <!--名称是“博客主题 - 博主昵称 - 博客园 名称.css”这样子-->
+    <link href="blog-common.css">
+    <!--屏幕尺寸正常使用这个css样式文件-->
+    <link href="bundle-SimpleMemory.css">
+    <!--屏幕尺寸小于767px时候使用这个css样式文件-->
+    <link media="only screen and (max-width: 767px)" href="bundle-SimpleMemory-mobile.css">
+    <!--js文件略-->
+</head>
+
+<body>
+    <!--home是simpleMemory主题的白色的那一整块区域的容器，与灰色背景相对-->
+    <div id="home">
+        <div id="header">
+            <!--博客标题，这里原本有一个定位在右边的返回博主页的logo链接，但是实际没有显示，所以我删除了-->
+            <div id="blogTitle">
+                <h1><a id="Header1_HeaderTitle" class="headermaintitle">博主昵称</a></h1>
+            </div>
+            <!--导航栏-->
+            <div id="navigator">
+                <!--链接导航-->
+                <ul id="navList">
+                    <li><a id="blog_nav_sitehome" class="menu">博客园</a></li>
+                    <li><a id="blog_nav_myhome" class="menu">首页</a></li>
+                    <li><a id="blog_nav_newpost" class="menu">新随笔</a></li>
+                    <li><a id="blog_nav_contact" class="menu">联系</a></li>
+                    <li><a id="blog_nav_rss" class="menu">订阅</a></li>
+                    <li><a id="blog_nav_admin" class="menu">管理</a></li>
+                </ul>
+                <!--博主的博客统计信息，n是服务器写入的数量-->
+                <div class="blogStats">
+                    <div id="blog_stats">
+                        <span id="stats_post_count">随笔 - n&nbsp; </span>
+                        <span id="stats_article_count">文章 - n&nbsp; </span>
+                        <span id="stats-comment_count">评论 - n</span>
+                    </div>
+                </div>
+            </div>
+            <!--end: navigator 博客导航栏 -->
+        </div>
+        <!--end: header 头部 -->
+
+        <!--内容部分，头部以下到 CopyRight@2018博主 字样之间的所有部分-->
+        <!--涵盖正文和侧边栏两大部分-->
+        <div id="main">
+            <!--正文-->
+            <div id="mainContent">
+                <div class="forFlow">
+                    <div id="post_detail">
+                        <!--经过上面的样式包装后，这里是你的这篇博客内容部分-->
+                        <div id="topics">
+                            <div class="post">
+                                <!--博客主题-->
+                                <h1 class="postTitle">
+                                    <a id="cb_post_title_url" class="postTitle2">博客主题</a>
+                                </h1>
+                                <!--博客内容和一些额外信息-->
+                                <div class="postBody">
+                                    <!--博客内容-->
+                                    <div id="cnblogs_post_body" class="blogpost-body">
+                                        博客正文，就是你写的部分
+                                        代码使用class='cnblogs_code'的样式
+                                    </div>
+                                    <!--这里可以定制个性签名,原来的样式是隐藏的-->
+                                    <div id="MySignature"></div>
+                                    <!--额外信息，包括分类信息、收藏等按钮、博主情况、上一篇和下一篇等-->
+                                    <div id="blog_post_info_block">
+                                        <div id="BlogPostCategory">分类: </div>
+                                        <!--关注收藏的功能按钮-->
+                                        <div id="blog_post_info">
+                                            <div id="green_channel">
+                                                <a id="green_channel_digg">好文要顶</a>
+                                                <a id="green_channel_follow">关注我</a>
+                                                <a id="green_channel_favorite">收藏该文</a>
+                                                <a id="green_channel_weibo">这里是微博图标</a>
+                                                <a id="green_channel_wechat">这里是微信图标</a>
+                                            </div>
+                                            <!--博主信息-->
+                                            <div id="author_profile">
+                                                <div id="author_profile_info" class="author_profile_info">
+                                                    <a><img class="author_avatar" src="博主头像" /></a>
+                                                    <div id="author_profile_detail" class="author_profile_info">
+                                                        <a>博主昵称</a><br>
+                                                        <a>关注 - n</a><br>
+                                                        <a>粉丝 - n</a>
+                                                    </div>
+                                                </div>
+                                                <div id="author_profile_honor"></div>
+                                                <div id="author_profile_follow">
+                                                    <a>+加关注</a>
+                                                </div>
+                                            </div>
+                                            <!--点赞或者踩的按钮-->
+                                            <div id="div_digg">
+                                                <!--点赞-->
+                                                <div class="diggit">
+                                                    <span class="diggnum" id="digg_count">n</span>
+                                                </div>
+                                                <!--踩-->
+                                                <div class="buryit">
+                                                    <span class="burynum" id="bury_count">n</span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <!--end:额外信息结束-->
+                                    <!--上一篇和下一篇-->
+                                    <div id="post_next_prev">
+                                        <a class="p_n_p_prefix">« </a> 上一篇：
+                                        <a class="p_n_p_prefix">» </a> 下一篇：
+                                    </div>
+                                </div>
+                                <!--end：博客内容和额外信息结束-->
+                            </div>
+                            <!--本篇博客被阅读和评论的情况等信息-->
+                            <div class="postDesc">
+                                posted @ <span id="post-date">2018-10-05 21:59</span>
+                                阅读(<span id="post_view_count">n</span>)
+                                评论(<span id="post_comment_count">n</span>)
+                            </div>
+                        </div>
+                        <!--end：你的博客内容部分结束-->
+                    </div>
+                    <!--已经评论将会显示在这里-->
+                    <div id="blog-comments-placeholder"></div>
+                    <!--包括刷新按钮、评论发表区、相关博文、广告和新闻-->
+                    <div id="comment_form" class="commentform">
+                        <div id="comment_nav">
+                            <a id="lnk_RefreshComments">刷新评论</a>
+                            <a>刷新页面</a>
+                            <a>返回顶部</a>
+                        </div>
+                        <div id="comment_form_container">
+                            <div class="login_tips">注册用户登录后才能发表评论，请登录或注册</div>
+                        </div>
+                        <div id="under_post_news">
+                            <div class="itnews c_ad_block">相关博文：</div>
+                        </div>
+                        <!--广告-->
+                        <div id="cnblogs_c2" class="c_ad_block"></div>
+                        <!--新闻-->
+                        <div id="under_post_kb">
+                            <div class="itnews c_ad_block">最新新闻</div>
+                        </div>
+                        <div id="HistoryToday" class="c_ad_block"></div>
+                    </div>
+                    <!--end: 刷新按钮、评论发表区、相关博文、广告和新闻-->
+                </div>
+                <!--end: forFlow -->
+            </div>
+            <!--end: mainContent 主体内容容器-->
+
+            <!--侧边栏部分-->
+            <div id="sideBar">
+                <div id="sideBarMain">
+                    <!--公告栏-->
+                    <div class="newsItem">
+                        <h3 class="catListTitle">公告</h3>
+                        <div id="blog-news">
+                            <div id="profile_block">具体信息可以看你的博公告栏部分</div>
+                        </div>
+                    </div>
+                    <!--日历，原来的html是完整的用<table>标签定义的，不建议修改，太麻烦了-->
+                    <div id="blog-calendar"></div>
+                    <!--其它一些信息，包括搜索栏、随笔分类、随笔档案、阅读排行榜等，这些可以在博客的设置中开启或关闭-->
+                    <!--每个人都不一样，具体就自己查看了-->
+                    <div id="leftcontentcontainer"></div>
+                </div>
+                <!--end: sideBarMain -->
+            </div>
+            <!--end: sideBar 侧边栏容器 -->
+        </div>
+        <!--end: 主体部分结束 -->
+
+        <!--下面是设置足部，原始页面是Copyright©2018 XXX的信息-->
+        <div id="footer"></div>
+    </div>
+    <!--end: home 自定义的最大容器 -->
+</body>
+
+</html>
