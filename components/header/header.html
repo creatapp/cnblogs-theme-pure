@@ -1,0 +1,20 @@
+<div id="page_begin_html">
+        <div id="top_title" style="font-size:20px;margin:5px;margin-left: 20px;font-weight: bolder">勉强的猫</div>
+        <div id="top_btn">
+                <a id="blog_nav_sitehome" class="menu" href="https://www.cnblogs.com/">博客园</a>
+                <a id="blog_nav_myhome" class="menu" href="https://www.cnblogs.com/wangnig/">首页</a>
+                <a id="blog_nav_newpost" class="menu" rel="nofollow" href="https://i.cnblogs.com/EditPosts.aspx?opt=1">新随笔</a>
+                <a id="blog_nav_contact" class="menu" rel="nofollow" href="https://msg.cnblogs.com/send/%E5%8B%89%E5%BC%BA%E7%9A%84%E7%8C%AB">联系</a>
+                <a id="blog_nav_rss" class="menu" href="https://www.cnblogs.com/wangnig/rss">订阅</a>
+        </div>
+        <script>
+            window.onscroll = function(){
+                var height = document.documentElement.scrollTop
+                if(height>200){
+                    document.getElementById("top_title").innerHTML=document.getElementById("cb_post_title_url").innerHTML;
+                }else{
+                    document.getElementById("top_title").innerHTML="勉强的猫";
+                }
+            }
+        </script>
+    </div>
